@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{%  block title %}
+Success
+{% endblock %}
+
+{%  block content %}
+    <main>
+        <h1 class="centered" style="font-family: Arial,sans-serif;color: green;font-size: 60px">Data Successfully Entered!!</h1>
+        <div class="centered"><a href={% url 'main' %}><button class="btn btn-primary">Back to Home</button></a></div>
+    </main>
+{% endblock %}

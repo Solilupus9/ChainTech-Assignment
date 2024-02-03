@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}View Data{% endblock %}
+
+{% block content %}
+    <main class="centered">
+        <table >
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Phone Number</th>
+                    <th>Email ID</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item.First_Name }}</td>
+                        <td>{{ item.Last_Name }}</td>
+                        <td>{{ item.Age }}</td>
+                        <td>{{ item.Phone_Number }}</td>
+                        <td>{{ item.Email_ID }}</td>
+                        <td>{{ item.Password }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <div class="centered" style="padding-top: 20px"><a href={% url 'main' %}><button class="btn btn-primary">Back to Home</button></a></div>
+{% endblock %}
